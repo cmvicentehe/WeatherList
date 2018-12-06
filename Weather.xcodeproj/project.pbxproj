@@ -7,12 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8FBADEFD21B9853C0077FBA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADEFC21B9853C0077FBA8 /* AppDelegate.swift */; };
-		8FBADEFF21B9853C0077FBA8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADEFE21B9853C0077FBA8 /* ViewController.swift */; };
-		8FBADF0221B9853C0077FBA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBADF0021B9853C0077FBA8 /* Main.storyboard */; };
-		8FBADF0421B9853F0077FBA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBADF0321B9853F0077FBA8 /* Assets.xcassets */; };
-		8FBADF0721B9853F0077FBA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBADF0521B9853F0077FBA8 /* LaunchScreen.storyboard */; };
 		8FBADF1221B9853F0077FBA8 /* WeatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF1121B9853F0077FBA8 /* WeatherTests.swift */; };
+		8FBADF2921B990020077FBA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF1E21B990020077FBA8 /* AppDelegate.swift */; };
+		8FBADF2A21B990020077FBA8 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF2121B990020077FBA8 /* ListVC.swift */; };
+		8FBADF2B21B990020077FBA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBADF2321B990020077FBA8 /* Assets.xcassets */; };
+		8FBADF2C21B990020077FBA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBADF2421B990020077FBA8 /* LaunchScreen.storyboard */; };
+		8FBADF3521B995040077FBA8 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF2F21B995040077FBA8 /* Result.swift */; };
+		8FBADF3621B995040077FBA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF3021B995040077FBA8 /* Constants.swift */; };
+		8FBADF3721B995040077FBA8 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF3221B995040077FBA8 /* NetworkClient.swift */; };
+		8FBADF3921B995040077FBA8 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF3421B995040077FBA8 /* Response.swift */; };
+		8FBADF3C21B9A2B00077FBA8 /* Cofig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF3B21B9A2B00077FBA8 /* Cofig.swift */; };
+		8FBADF3E21B9A2E20077FBA8 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8FBADF3D21B9A2E20077FBA8 /* Config.xcconfig */; };
+		8FBADF4021B9AA980077FBA8 /* CoreLocationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF3F21B9AA980077FBA8 /* CoreLocationWrapper.swift */; };
+		8FBADF4221B9AB3E0077FBA8 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF4121B9AB3E0077FBA8 /* ListPresenter.swift */; };
+		8FBADF4421B9AC2F0077FBA8 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF4321B9AC2F0077FBA8 /* ListInteractor.swift */; };
+		8FBADF4621B9AC510077FBA8 /* ListWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF4521B9AC510077FBA8 /* ListWireframe.swift */; };
+		8FBADF4921B9AEAD0077FBA8 /* List.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FBADF4721B9AEAD0077FBA8 /* List.storyboard */; };
+		8FBADF4B21B9B8270077FBA8 /* ListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF4A21B9B8270077FBA8 /* ListRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,15 +38,26 @@
 
 /* Begin PBXFileReference section */
 		8FBADEF921B9853C0077FBA8 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FBADEFC21B9853C0077FBA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8FBADEFE21B9853C0077FBA8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8FBADF0121B9853C0077FBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8FBADF0321B9853F0077FBA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8FBADF0621B9853F0077FBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		8FBADF0821B9853F0077FBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FBADF0D21B9853F0077FBA8 /* WeatherTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBADF1121B9853F0077FBA8 /* WeatherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTests.swift; sourceTree = "<group>"; };
 		8FBADF1321B9853F0077FBA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FBADF1E21B990020077FBA8 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8FBADF2121B990020077FBA8 /* ListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		8FBADF2321B990020077FBA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FBADF2521B990020077FBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8FBADF2821B990020077FBA8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8FBADF2F21B995040077FBA8 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		8FBADF3021B995040077FBA8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8FBADF3221B995040077FBA8 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		8FBADF3421B995040077FBA8 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		8FBADF3B21B9A2B00077FBA8 /* Cofig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cofig.swift; sourceTree = "<group>"; };
+		8FBADF3D21B9A2E20077FBA8 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		8FBADF3F21B9AA980077FBA8 /* CoreLocationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationWrapper.swift; sourceTree = "<group>"; };
+		8FBADF4121B9AB3E0077FBA8 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
+		8FBADF4321B9AC2F0077FBA8 /* ListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		8FBADF4521B9AC510077FBA8 /* ListWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListWireframe.swift; sourceTree = "<group>"; };
+		8FBADF4821B9AEAD0077FBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/List.storyboard; sourceTree = "<group>"; };
+		8FBADF4A21B9B8270077FBA8 /* ListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +99,11 @@
 		8FBADEFB21B9853C0077FBA8 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				8FBADEFC21B9853C0077FBA8 /* AppDelegate.swift */,
-				8FBADEFE21B9853C0077FBA8 /* ViewController.swift */,
-				8FBADF0021B9853C0077FBA8 /* Main.storyboard */,
-				8FBADF0321B9853F0077FBA8 /* Assets.xcassets */,
-				8FBADF0521B9853F0077FBA8 /* LaunchScreen.storyboard */,
-				8FBADF0821B9853F0077FBA8 /* Info.plist */,
+				8FBADF3A21B9A11B0077FBA8 /* Config */,
+				8FBADF1E21B990020077FBA8 /* AppDelegate.swift */,
+				8FBADF1C21B990020077FBA8 /* Common */,
+				8FBADF2221B990020077FBA8 /* Resources */,
+				8FBADF1F21B990020077FBA8 /* Sections */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -94,6 +115,74 @@
 				8FBADF1321B9853F0077FBA8 /* Info.plist */,
 			);
 			path = WeatherTests;
+			sourceTree = "<group>";
+		};
+		8FBADF1C21B990020077FBA8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8FBADF3021B995040077FBA8 /* Constants.swift */,
+				8FBADF3121B995040077FBA8 /* Network */,
+				8FBADF2F21B995040077FBA8 /* Result.swift */,
+				8FBADF1D21B990020077FBA8 /* Wrappers */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		8FBADF1D21B990020077FBA8 /* Wrappers */ = {
+			isa = PBXGroup;
+			children = (
+				8FBADF3F21B9AA980077FBA8 /* CoreLocationWrapper.swift */,
+			);
+			path = Wrappers;
+			sourceTree = "<group>";
+		};
+		8FBADF1F21B990020077FBA8 /* Sections */ = {
+			isa = PBXGroup;
+			children = (
+				8FBADF2021B990020077FBA8 /* List */,
+			);
+			path = Sections;
+			sourceTree = "<group>";
+		};
+		8FBADF2021B990020077FBA8 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				8FBADF4721B9AEAD0077FBA8 /* List.storyboard */,
+				8FBADF2121B990020077FBA8 /* ListVC.swift */,
+				8FBADF4121B9AB3E0077FBA8 /* ListPresenter.swift */,
+				8FBADF4321B9AC2F0077FBA8 /* ListInteractor.swift */,
+				8FBADF4521B9AC510077FBA8 /* ListWireframe.swift */,
+				8FBADF4A21B9B8270077FBA8 /* ListRepository.swift */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		8FBADF2221B990020077FBA8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8FBADF2321B990020077FBA8 /* Assets.xcassets */,
+				8FBADF2421B990020077FBA8 /* LaunchScreen.storyboard */,
+				8FBADF2821B990020077FBA8 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8FBADF3121B995040077FBA8 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				8FBADF3221B995040077FBA8 /* NetworkClient.swift */,
+				8FBADF3421B995040077FBA8 /* Response.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8FBADF3A21B9A11B0077FBA8 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				8FBADF3B21B9A2B00077FBA8 /* Cofig.swift */,
+				8FBADF3D21B9A2E20077FBA8 /* Config.xcconfig */,
+			);
+			path = Config;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,6 +235,7 @@
 				TargetAttributes = {
 					8FBADEF821B9853C0077FBA8 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					8FBADF0C21B9853F0077FBA8 = {
 						CreatedOnToolsVersion = 10.1;
@@ -177,9 +267,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FBADF0721B9853F0077FBA8 /* LaunchScreen.storyboard in Resources */,
-				8FBADF0421B9853F0077FBA8 /* Assets.xcassets in Resources */,
-				8FBADF0221B9853C0077FBA8 /* Main.storyboard in Resources */,
+				8FBADF3E21B9A2E20077FBA8 /* Config.xcconfig in Resources */,
+				8FBADF2B21B990020077FBA8 /* Assets.xcassets in Resources */,
+				8FBADF4921B9AEAD0077FBA8 /* List.storyboard in Resources */,
+				8FBADF2C21B990020077FBA8 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,8 +288,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FBADEFF21B9853C0077FBA8 /* ViewController.swift in Sources */,
-				8FBADEFD21B9853C0077FBA8 /* AppDelegate.swift in Sources */,
+				8FBADF4421B9AC2F0077FBA8 /* ListInteractor.swift in Sources */,
+				8FBADF3521B995040077FBA8 /* Result.swift in Sources */,
+				8FBADF4221B9AB3E0077FBA8 /* ListPresenter.swift in Sources */,
+				8FBADF3721B995040077FBA8 /* NetworkClient.swift in Sources */,
+				8FBADF2A21B990020077FBA8 /* ListVC.swift in Sources */,
+				8FBADF2921B990020077FBA8 /* AppDelegate.swift in Sources */,
+				8FBADF3C21B9A2B00077FBA8 /* Cofig.swift in Sources */,
+				8FBADF3621B995040077FBA8 /* Constants.swift in Sources */,
+				8FBADF4621B9AC510077FBA8 /* ListWireframe.swift in Sources */,
+				8FBADF3921B995040077FBA8 /* Response.swift in Sources */,
+				8FBADF4021B9AA980077FBA8 /* CoreLocationWrapper.swift in Sources */,
+				8FBADF4B21B9B8270077FBA8 /* ListRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,20 +322,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8FBADF0021B9853C0077FBA8 /* Main.storyboard */ = {
+		8FBADF2421B990020077FBA8 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8FBADF0121B9853C0077FBA8 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8FBADF0521B9853F0077FBA8 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8FBADF0621B9853F0077FBA8 /* Base */,
+				8FBADF2521B990020077FBA8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8FBADF4721B9AEAD0077FBA8 /* List.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8FBADF4821B9AEAD0077FBA8 /* Base */,
+			);
+			name = List.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -242,6 +343,7 @@
 /* Begin XCBuildConfiguration section */
 		8FBADF1421B9853F0077FBA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FBADF3D21B9A2E20077FBA8 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -303,6 +405,7 @@
 		};
 		8FBADF1521B9853F0077FBA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FBADF3D21B9A2E20077FBA8 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -358,17 +461,20 @@
 		};
 		8FBADF1721B9853F0077FBA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FBADF3D21B9A2E20077FBA8 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PY2HS9FGVN;
-				INFOPLIST_FILE = Weather/Info.plist;
+				INFOPLIST_FILE = Weather/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = cmvicentehe.com.Weather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -376,11 +482,13 @@
 		};
 		8FBADF1821B9853F0077FBA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FBADF3D21B9A2E20077FBA8 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PY2HS9FGVN;
-				INFOPLIST_FILE = Weather/Info.plist;
+				INFOPLIST_FILE = Weather/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -394,6 +502,7 @@
 		};
 		8FBADF1A21B9853F0077FBA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FBADF3D21B9A2E20077FBA8 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -415,6 +524,7 @@
 		};
 		8FBADF1B21B9853F0077FBA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FBADF3D21B9A2E20077FBA8 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

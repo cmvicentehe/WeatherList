@@ -1,0 +1,13 @@
+//
+//  Config.xcconfig
+//  Weather
+//
+//  Created by Carlos Vicente on 06/12/2018.
+//  Copyright © 2018 cmvicentehe. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+HOST_URL = api.darksky.net
+DARKSKY_API_KEY = e4d8ec000055a1fdcb06e54863bf72aa
