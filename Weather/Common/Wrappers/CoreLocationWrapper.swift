@@ -10,17 +10,30 @@ import Foundation
 import CoreLocation
 
 protocol CoreLocationInput {
-    // TODO: Imlement!
+    func requestAuth()
 }
 
-protocol CoreLocationOutput {
-    // TODO: Imlement!
+protocol CoreLocationWrapperOutput: class {
+   func displayUserLocation()
 }
 
-struct CoreLocationWrapper {
+class CoreLocationWrapper {
+    let coreLocation: CLLocationManager
+    weak var output: CoreLocationWrapperOutput?
     
+    init(coreLocation: CLLocationManager = CLLocationManager()) {
+        self.coreLocation = coreLocation
+    }
 }
 
 extension CoreLocationWrapper: CoreLocationInput {
-    
+    func requestAuth() {
+       let authorizationStatus = CLLocationManager.authorizationStatus()
+        switch authorizationStatus {
+        case .authorizedAlways, .authorizedWhenInUse:
+             self.output?.displayUserLocation()
+        case .denied, .notDetermined, .restricted:
+            self.coreLocation.requestWhenInUseAuthorization()
+        }
+    }
 }

@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  Weather
+
+  Created by Carlos Vicente on 08/12/2018.
+  Copyright © 2018 cmvicentehe. All rights reserved.
+*/
+
+"running" = "Go for running";
+"eating" = "Go for eating";
+"place_to_eat" = "Place to eat";

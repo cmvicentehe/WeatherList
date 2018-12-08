@@ -9,10 +9,12 @@
 import Foundation
 
 protocol ListUI: class {
-     #warning ("Implement!")
+     func displayUserLocation()
 }
 protocol ListPresenterInput {
-   func viewDidLoad()
+    func viewDidLoad()
+    func userDidUpdateLocation(userLocation: Location)
+    func userDidUpdatePointOfInterest(pointOfInterest: Location)
 }
 
 class ListPresenter {
@@ -29,11 +31,20 @@ class ListPresenter {
 
 extension ListPresenter: ListPresenterInput {
     func viewDidLoad() {
-        #warning ("Implement!")
-        print("View did loaded")
+        self.interactor.requestLocationAuth()
+    }
+    
+    func userDidUpdateLocation(userLocation: Location) {
+        self.interactor.userLocationDidUpdate(userLocation)
+    }
+    
+    func userDidUpdatePointOfInterest(pointOfInterest: Location) {
+        self.interactor.pointOfInterestDidUpdate(pointOfInterest)
     }
 }
 
 extension ListPresenter: ListInteractorOutput {
-    
+    func displayUserLocation() {
+        self.view?.displayUserLocation()
+    }
 }

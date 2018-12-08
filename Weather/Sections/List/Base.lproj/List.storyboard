@@ -10,16 +10,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ListVC-->
+        <!--Weather ListVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController storyboardIdentifier="ListVC" id="BYZ-38-t0r" customClass="ListVC" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeatherListVC" id="BYZ-38-t0r" customClass="WeatherListVC" customModule="Weather" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" showsScale="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I0n-oU-38t">
+                                <rect key="frame" x="0.0" y="20" width="375" height="267"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="A5g-GV-EV4"/>
+                                </connections>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XGN-lz-tLs">
+                                <rect key="frame" x="0.0" y="287" width="375" height="380"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fSx-ME-3eF"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="I0n-oU-38t" secondAttribute="trailing" id="0jy-Xi-zvY"/>
+                            <constraint firstItem="XGN-lz-tLs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6zH-Qi-8cG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XGN-lz-tLs" secondAttribute="bottom" id="ASf-ob-eav"/>
+                            <constraint firstItem="XGN-lz-tLs" firstAttribute="top" secondItem="I0n-oU-38t" secondAttribute="bottom" id="DS5-7L-wf5"/>
+                            <constraint firstItem="I0n-oU-38t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fa7-kk-cKp"/>
+                            <constraint firstItem="I0n-oU-38t" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="P7E-ai-axU"/>
+                            <constraint firstItem="I0n-oU-38t" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="RN9-TL-z9i"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XGN-lz-tLs" secondAttribute="trailing" id="xJb-AT-Ncr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="I0n-oU-38t" id="Fjq-et-Mgk"/>
+                        <outlet property="weatherList" destination="XGN-lz-tLs" id="uV6-kL-bkO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -18,20 +18,19 @@ struct ListWireframe {
 
 extension ListWireframe: ListWireframeInput {
     func showList() {
-        guard let listVC = UIStoryboard(name: Constants.listStoryBoard, bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.listVC) as? ListVC else {
-            print("ListVC is nil")
+        guard let listVC = UIStoryboard(name: Constants.listStoryBoard, bundle: Bundle.main).instantiateViewController(withIdentifier: Constants.listVC) as? WeatherListVC else {
+            print("WeatherListVC is nil")
             return
         }
-        
-        let interactor = ListInteractor()
+        let locationWrapper = CoreLocationWrapper()
+        let interactor = ListInteractor(locationWrapper: locationWrapper)
         let networkClient = NetworkClient()
         let listRepository = ListRepository(networkClient: networkClient, interactor: interactor)
         interactor.repository = listRepository
-        
         let presenter = ListPresenter(view: listVC,
                                       interactor: interactor,
                                       wireframe: self)
-        
+        locationWrapper.output = interactor
         interactor.presenter = presenter
         listVC.presenter = presenter
         let navigationController = UINavigationController(rootViewController: listVC)

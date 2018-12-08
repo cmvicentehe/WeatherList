@@ -19,8 +19,12 @@ struct Constants {
     
     // MARK: Storyboards
     static let listStoryBoard = "List"
-    static let listVC = "ListVC"
+    static let listVC = "WeatherListVC"
+    
+    // MARK: Location coordinates
+    static let latitudeDelta = 0.04
+    static let longitudeDelta = 0.04
     
     // MARK: Cell identifiers
-
+    
 }

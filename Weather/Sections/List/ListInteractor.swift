@@ -7,24 +7,49 @@
 //
 
 import Foundation
+import CoreLocation
 
 protocol ListInteractorInput {
-    #warning("Implemen!")
+    func requestLocationAuth()
+    func userLocationDidUpdate(_ userLocation: Location)
+    func pointOfInterestDidUpdate(_ pointOfInterest: Location)
 }
 
 protocol ListInteractorOutput {
-    #warning("Implemen!")
+   func displayUserLocation()
 }
 
 class ListInteractor {
     var presenter: ListInteractorOutput?
     var repository: ListRepositoryInput?
+    let locationWrapper: CoreLocationWrapper
+    var userLocation: Location?
+    var pointOfInterest: Location?
+    init(locationWrapper: CoreLocationWrapper) {
+        self.locationWrapper = locationWrapper
+    }
 }
 
 extension ListInteractor: ListInteractorInput {
+    func requestLocationAuth() {
+        self.locationWrapper.requestAuth()
+    }
     
+    func userLocationDidUpdate(_ userLocation: Location) {
+        self.userLocation = userLocation
+    }
+    
+    func pointOfInterestDidUpdate(_ pointOfInterest: Location) {
+        self.pointOfInterest = pointOfInterest
+    }
 }
 
 extension ListInteractor: ListRepositoryOutput {
     
+}
+
+extension ListInteractor: CoreLocationWrapperOutput {
+    func displayUserLocation() {
+        self.presenter?.displayUserLocation()
+    }
 }
