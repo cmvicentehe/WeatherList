@@ -12,3 +12,10 @@ import CoreLocation
 struct Location {
     let coordinate: CLLocationCoordinate2D
 }
+
+extension Location: Equatable {
+    static func == (lhs: Location, rhs: Location) -> Bool {
+        return ((lhs.coordinate.latitude == rhs.coordinate.latitude) &&
+        (lhs.coordinate.longitude == rhs.coordinate.longitude))
+    }
+}

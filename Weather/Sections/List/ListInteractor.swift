@@ -25,12 +25,12 @@ protocol ListInteractorOutput {
 class ListInteractor {
     var presenter: ListInteractorOutput?
     var repository: ListRepositoryInput?
-    let locationWrapper: CoreLocationWrapper
+    let locationWrapper: CoreLocationInput
     var userLocation: Location?
     var pointOfInterest: Location?
     private var weatherList: [Weather]?
     
-    init(locationWrapper: CoreLocationWrapper) {
+    init(locationWrapper: CoreLocationInput) {
         self.locationWrapper = locationWrapper
     }
 }
