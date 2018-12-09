@@ -9,7 +9,8 @@
 import UIKit
 
 protocol ListWireframeInput {
-     func showList()
+    func showList()
+    func showError(message: String)
 }
 
 struct ListWireframe {
@@ -36,5 +37,12 @@ extension ListWireframe: ListWireframeInput {
         let navigationController = UINavigationController(rootViewController: listVC)
         self.window.rootViewController = navigationController
         self.window.makeKeyAndVisible()
+    }
+    
+    func showError(message: String) {
+        let alertController = UIAlertController(title: NSLocalizedString("weather_list", comment: ""), message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: NSLocalizedString("ok", comment: ""), style: .cancel, handler: nil))
+        let rootViewController = self.window.rootViewController
+        rootViewController?.present(alertController, animated: true, completion: nil)
     }
 }

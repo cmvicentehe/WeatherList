@@ -13,6 +13,8 @@ class WeatherListVC: UIViewController {
     var presenter: ListPresenterInput?
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var weatherList: UITableView!
+    @IBOutlet weak var ativityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var loadingView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,7 +53,6 @@ class WeatherListVC: UIViewController {
     
      // MARK: User Interaction
     @objc func userDidTapMapPoint(_ sender: UITapGestureRecognizer) {
-        #warning("Animate")
         DispatchQueue.global().sync {
             self.removeAnnotations()
             let pointOfInterest = self.calculateLocation(from: sender)
@@ -65,13 +66,16 @@ class WeatherListVC: UIViewController {
 
 extension WeatherListVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        #warning("Implement!")
-        return 0
+        return self.presenter?.weatherList?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        #warning("Implement!")
-        return UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.weatherCellIdentifier, for: indexPath)
+        if let weather = self.presenter?.weatherList?[indexPath.row] {
+            cell.textLabel?.text = "\(Constants.temperature): \(Int(weather.temperature)) - \(Constants.time): \(weather.timeFromTimeInterval()) "
+            cell.detailTextLabel?.text = weather.weather
+        }
+        return cell
     }    
 }
 
@@ -85,9 +89,29 @@ extension WeatherListVC: MKMapViewDelegate {
 }
 
 extension WeatherListVC: ListUI {
+    func displayActivityIndicator() {
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = false
+            self.ativityIndicator.startAnimating()
+        }
+    }
+    
+    func hideActivityIndicator() {
+        DispatchQueue.main.async {
+            self.loadingView.isHidden = true
+            self.ativityIndicator.stopAnimating()
+        }
+    }
+    
     func displayUserLocation() {
         self.mapView.showsUserLocation = true
         self.title = NSLocalizedString("running", comment: "")
+    }
+    
+    func displayWeather(list: [Weather]) {
+        DispatchQueue.main.async {
+             self.weatherList.reloadData()
+        }
     }
 }
 

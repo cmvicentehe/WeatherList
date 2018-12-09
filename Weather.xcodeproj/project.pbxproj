@@ -16,7 +16,7 @@
 		8FBADF3621B995040077FBA8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF3021B995040077FBA8 /* Constants.swift */; };
 		8FBADF3721B995040077FBA8 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF3221B995040077FBA8 /* NetworkClient.swift */; };
 		8FBADF3921B995040077FBA8 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF3421B995040077FBA8 /* Response.swift */; };
-		8FBADF3C21B9A2B00077FBA8 /* Cofig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF3B21B9A2B00077FBA8 /* Cofig.swift */; };
+		8FBADF3C21B9A2B00077FBA8 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF3B21B9A2B00077FBA8 /* Config.swift */; };
 		8FBADF3E21B9A2E20077FBA8 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 8FBADF3D21B9A2E20077FBA8 /* Config.xcconfig */; };
 		8FBADF4021B9AA980077FBA8 /* CoreLocationWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF3F21B9AA980077FBA8 /* CoreLocationWrapper.swift */; };
 		8FBADF4221B9AB3E0077FBA8 /* ListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF4121B9AB3E0077FBA8 /* ListPresenter.swift */; };
@@ -26,6 +26,7 @@
 		8FBADF4B21B9B8270077FBA8 /* ListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF4A21B9B8270077FBA8 /* ListRepository.swift */; };
 		8FBADF5421BBD4980077FBA8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF5321BBD4980077FBA8 /* Location.swift */; };
 		8FBADF5621BC1BC30077FBA8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8FBADF5521BC1BC30077FBA8 /* Localizable.strings */; };
+		8FBADF5821BC2BE60077FBA8 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBADF5721BC2BE60077FBA8 /* Weather.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +53,7 @@
 		8FBADF3021B995040077FBA8 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8FBADF3221B995040077FBA8 /* NetworkClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		8FBADF3421B995040077FBA8 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		8FBADF3B21B9A2B00077FBA8 /* Cofig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cofig.swift; sourceTree = "<group>"; };
+		8FBADF3B21B9A2B00077FBA8 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		8FBADF3D21B9A2E20077FBA8 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		8FBADF3F21B9AA980077FBA8 /* CoreLocationWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLocationWrapper.swift; sourceTree = "<group>"; };
 		8FBADF4121B9AB3E0077FBA8 /* ListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListPresenter.swift; sourceTree = "<group>"; };
@@ -63,6 +64,7 @@
 		8FBADF4F21BBB8630077FBA8 /* Madrid.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Madrid.gpx; sourceTree = "<group>"; };
 		8FBADF5321BBD4980077FBA8 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		8FBADF5521BC1BC30077FBA8 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		8FBADF5721BC2BE60077FBA8 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +190,7 @@
 		8FBADF3A21B9A11B0077FBA8 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				8FBADF3B21B9A2B00077FBA8 /* Cofig.swift */,
+				8FBADF3B21B9A2B00077FBA8 /* Config.swift */,
 				8FBADF3D21B9A2E20077FBA8 /* Config.xcconfig */,
 			);
 			path = Config;
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				8FBADF5321BBD4980077FBA8 /* Location.swift */,
+				8FBADF5721BC2BE60077FBA8 /* Weather.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -325,8 +328,9 @@
 				8FBADF2A21B990020077FBA8 /* WeatherListVC.swift in Sources */,
 				8FBADF5421BBD4980077FBA8 /* Location.swift in Sources */,
 				8FBADF2921B990020077FBA8 /* AppDelegate.swift in Sources */,
-				8FBADF3C21B9A2B00077FBA8 /* Cofig.swift in Sources */,
+				8FBADF3C21B9A2B00077FBA8 /* Config.swift in Sources */,
 				8FBADF3621B995040077FBA8 /* Constants.swift in Sources */,
+				8FBADF5821BC2BE60077FBA8 /* Weather.swift in Sources */,
 				8FBADF4621B9AC510077FBA8 /* ListWireframe.swift in Sources */,
 				8FBADF3921B995040077FBA8 /* Response.swift in Sources */,
 				8FBADF4021B9AA980077FBA8 /* CoreLocationWrapper.swift in Sources */,

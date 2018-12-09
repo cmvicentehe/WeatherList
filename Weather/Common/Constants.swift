@@ -9,9 +9,13 @@
 import Foundation
 
 struct Constants {
-    // MARK: Endpoints
+    // MARK: Repository url components
     static let scheme = "https"
     static let forecast = "forecast"
+    static let excludedKey = "exclude"
+    static let excludedValues = "currently,minutely,daily,alerts,flags" // Static string to avoid errors with commas
+    static let unitsKey = "units"
+    static let internationalSystem = "si"
 
     // MARK: info-plist keys
     static let hostUrl = "HOST_URL"
@@ -26,5 +30,9 @@ struct Constants {
     static let longitudeDelta = 0.04
     
     // MARK: Cell identifiers
+    static let weatherCellIdentifier = "WeatherCell"
     
+    // MARK: List Texts
+    static let temperature = "Temperature"
+    static let time = "Time"
 }
