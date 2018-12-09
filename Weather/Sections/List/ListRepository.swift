@@ -64,38 +64,18 @@ struct ListRepository {
     
     private func parse(_ data: Data) -> [Weather]? {
         var weatherResult: [Weather]? = nil
-//        do {
-//            let decoder = JSONDecoder()
-//            let hourlyDictionary: HourlyDictionary = try decoder.decode(HourlyDictionary.self, from: data)
-//            print(hourlyDictionary)
-////            let hourlyItem = hourly.hourly
-//
-////            weatherResult = [Weather]()
-////            weatherResult = hourlyItem.first?.data
-//        } catch let error {
-//            print("Error received", error)
-//        }
-        #warning("Move to Codable")
         do {
-        let jsonResponse = try JSONSerialization.jsonObject(with:
-            data, options: .allowFragments) as? [String: Any]
-            guard let hourlyDictionary = jsonResponse?["hourly"] as? [String: Any],
-            let data = hourlyDictionary["data"] as? [[String: Any]] else { return weatherResult}
-            weatherResult = [Weather]()
-            for dataItem in data {
-                if let temperature = dataItem["temperature"] as? Double,
-                let weather = dataItem["summary"] as? String,
-                let time =  dataItem["time"] as? TimeInterval {
-                    let weatherItem = Weather(temperature: temperature, time: time, weather: weather)
-                    weatherResult?.append(weatherItem)
-                }
-            
-            }
+            let decoder = JSONDecoder()
+            let hourlyDictionary: HourlyDictionary = try decoder.decode(HourlyDictionary.self, from: data)
+            let hourlyItem = hourlyDictionary.hourly
+            let data = hourlyItem.data
 
+            weatherResult = [Weather]()
+            weatherResult = data
         } catch let error {
-            print("Error received", error)
+            let serviceError = WeatherListError.serviceError(error)
+            self.interactor.weather(result: Result.error(serviceError))
         }
-        
         return weatherResult
     }
 }

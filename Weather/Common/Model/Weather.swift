@@ -8,20 +8,20 @@
 
 import Foundation
 
-//struct HourlyDictionary: Codable {
-//    let hourly: [String: HourlyItem]
-//}
-//
-//struct HourlyItem: Codable {
-//    let data: [[String: Weather]]
-//}
+struct HourlyDictionary: Codable {
+    let hourly: HourlyItem
+}
 
-struct Weather/*: Codable*/ {
-//    enum CodingKeys : String, CodingKey {
-//        case temperature
-//        case weather = "summary"
-//        case time
-//    }
+struct HourlyItem: Codable {
+    let data: [Weather]
+}
+
+struct Weather: Codable {
+    enum CodingKeys : String, CodingKey {
+        case temperature
+        case weather = "summary"
+        case time
+    }
 
     let temperature: Double
     let time: TimeInterval
