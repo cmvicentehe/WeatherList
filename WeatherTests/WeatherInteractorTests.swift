@@ -13,13 +13,16 @@ import CoreLocation
 class WeatherInteractorTests: XCTestCase {
     var sut: ListInteractor!
     var coreLocationWrapperMock: CoreLocationWrapperMock!
+    var listPresenterMock: WeatherListPresenterMock!
     var listRepositoryMock: WeatherListRepositoryMock!
     
     override func setUp() {
       self.coreLocationWrapperMock = CoreLocationWrapperMock()
       self.listRepositoryMock = WeatherListRepositoryMock()
+      self.listPresenterMock = WeatherListPresenterMock()
       self.sut = ListInteractor(locationWrapper: self.coreLocationWrapperMock)
       self.sut?.repository = self.listRepositoryMock
+      self.sut?.presenter = self.listPresenterMock
     }
     
     override func tearDown() {

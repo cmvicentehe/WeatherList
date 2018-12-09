@@ -7,8 +7,6 @@
 //
 
 import Foundation
-
-import Foundation
 @testable import Weather
 
 class WeatherListRepositoryMock {

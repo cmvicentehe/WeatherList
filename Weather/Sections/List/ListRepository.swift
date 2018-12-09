@@ -21,7 +21,7 @@ protocol ListRepositoryOutput {
 }
 
 struct ListRepository {
-    let networkClient: NetworkClient
+    let networkClient: NetworkClientInput
     let interactor: ListRepositoryOutput
     
     // MARK: Private methods

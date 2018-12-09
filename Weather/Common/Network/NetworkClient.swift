@@ -8,29 +8,33 @@
 
 import Foundation
 
+protocol NetworkClientInput {
+    func performRequest(for urlRequest: URLRequest, completion: @escaping (Response?) -> Void)
+}
+
 struct NetworkClient {
         let urlSession: URLSession
         
         init(urlSession: URLSession = URLSession(configuration: URLSessionConfiguration.default)) {
             self.urlSession = urlSession
         }
-    
-    
-    func performRequest(for urlRequest: URLRequest, completion: @escaping (Response?) -> Void)  {
-            var urlResponse: Response? = nil
-            self.urlSession.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
-                guard let responseNotNil = response as? HTTPURLResponse else {
-                    print("Invalid response")
-                    return
-                }
-                urlResponse = Response(statusCode: responseNotNil.statusCode,
-                                       url: responseNotNil.url,
-                                       data: data,
-                                       error: error)
-                
-                completion(urlResponse)
-            }).resume()
-        
-        }
+}
 
+extension NetworkClient: NetworkClientInput {
+    func performRequest(for urlRequest: URLRequest, completion: @escaping (Response?) -> Void)  {
+        var urlResponse: Response? = nil
+        self.urlSession.dataTask(with: urlRequest, completionHandler: { (data, response, error) in
+            guard let responseNotNil = response as? HTTPURLResponse else {
+                print("Invalid response")
+                return
+            }
+            urlResponse = Response(statusCode: responseNotNil.statusCode,
+                                   url: responseNotNil.url,
+                                   data: data,
+                                   error: error)
+            
+            completion(urlResponse)
+        }).resume()
+        
+    }
 }
